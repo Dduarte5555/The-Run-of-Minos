@@ -778,7 +778,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -798,11 +804,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 5151c3af-6911-4482-85e6-2a86b56498c9
+  cloudProjectId: a7cb6f3d-461d-4126-a100-349e0cbbde52
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: The-Run-of-Minos
-  organizationId: dduarte5555
+  organizationId: pedrodannecker
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
