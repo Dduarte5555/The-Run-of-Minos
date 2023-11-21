@@ -28,6 +28,6 @@ public class PlayButton : MonoBehaviour
     public void OnPlayButton ()
     {
         FindObjectOfType<AudioManager>().Play("Play");
-        SceneManager.LoadScene("Scenes/TesteControle");
+        SceneManager.LoadScene("Scenes/MapDevelopment");
     }
 }

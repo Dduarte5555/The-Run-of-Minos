@@ -175,45 +175,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8108386510464962344, guid: 0523f82e372b3a04a90462fd0ecaf7ec, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1035707559919691063, guid: 0523f82e372b3a04a90462fd0ecaf7ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 635447218}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0523f82e372b3a04a90462fd0ecaf7ec, type: 3}
---- !u!1 &635447217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1035707559919691063, guid: 0523f82e372b3a04a90462fd0ecaf7ec, type: 3}
-  m_PrefabInstance: {fileID: 635447216}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &635447218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635447217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1d666eee1c8874fac004264d5e6b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 82d1e5a2ba4e04a4d8363947556697cf, type: 3}
-    volume: 0.5
-    pitch: 1.1
-    loop: 1
-    source: {fileID: 0}
-  - name: Play
-    clip: {fileID: 8300000, guid: 291c499ca50fe1c4196c357b39f5ee6b, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
 --- !u!1 &860355820
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00760a66d2722924f9f7815383ada4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  maxScoreText: {fileID: 0}
 --- !u!1 &912100463
 GameObject:
   m_ObjectHideFlags: 0

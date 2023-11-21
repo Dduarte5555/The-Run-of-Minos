@@ -46,7 +46,7 @@ public class InputManager : MonoBehaviour
         moeda.velocity = new Vector2(Speed,0);
 
         if (gameOver){
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Scenes/MenuFinal");
         }
     }
 
