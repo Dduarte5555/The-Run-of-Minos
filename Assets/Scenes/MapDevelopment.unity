@@ -794,16 +794,11 @@ MonoBehaviour:
   prevTeto: {fileID: 1559284492}
   player: {fileID: 1945798792}
   espinho: {fileID: 4785684343117263408, guid: cb1c786d05be59a4cba9ada29b8aecc6, type: 3}
-  espinho1: {fileID: 0}
-  espinho2: {fileID: 0}
-  espinho3: {fileID: 0}
-  espinho4: {fileID: 0}
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  minObsY: -4
-  maxObsY: 4
-  minObsSpacing: 5
-  maxObsSpacing: 10
+  enemy: {fileID: 2128953841513300023, guid: 16e2468b10c4aa94281abd46f4346e91, type: 3}
+  minObsY: 0
+  maxObsY: 5.5
+  minObsSpacing: 10
+  maxObsSpacing: 20
 --- !u!4 &965600453
 Transform:
   m_ObjectHideFlags: 0
@@ -1459,6 +1454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 7
   Speed: 5
+  gameOver: 0
 --- !u!114 &1945798794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,7 +1660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: -6, y: -3}
 --- !u!114 &2006566168
@@ -1798,7 +1794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: -3, y: -3}
 --- !u!114 &2114292056

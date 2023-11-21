@@ -15,12 +15,16 @@ public class MapGenerator : MonoBehaviour
     public GameObject player;
 
     public GameObject espinho;
-    public GameObject espinho1;
-    public GameObject espinho2;
-    public GameObject espinho3;
-    public GameObject espinho4;
-    public GameObject enemy1;
-    public GameObject enemy2;
+    private GameObject espinho1;
+    private GameObject espinho2;
+    private GameObject espinho3;
+    private GameObject espinho4;
+
+    public GameObject enemy;
+    private GameObject enemy1;
+    private GameObject enemy2;
+    private GameObject enemy3;
+    private GameObject enemy4;
 
     public float minObsY;
     public float maxObsY;
@@ -29,24 +33,42 @@ public class MapGenerator : MonoBehaviour
     public float maxObsSpacing;
     // Start is called before the first frame update
     void Start()
-    {
-        espinho1 = GenerateObstacle(player.transform.position.x + 10);
-        espinho2 = GenerateObstacle(espinho1.transform.position.x + 10);
-        espinho3 = GenerateObstacle(espinho2.transform.position.x + 10);
-        espinho4 = GenerateObstacle(espinho3.transform.position.x + 10);
+    {   
+        espinho1 = GenerateObstacleEspinho(player.transform.position.x + 10);
+        espinho2 = GenerateObstacleEspinho(espinho1.transform.position.x + 10);
+        espinho3 = GenerateObstacleEspinho(espinho2.transform.position.x + 10);
+        espinho4 = GenerateObstacleEspinho(espinho3.transform.position.x + 10);
+        
+        enemy1 = GenerateObstacleEnemy(player.transform.position.x + 5);
+        enemy2 = GenerateObstacleEnemy(enemy1.transform.position.x + 5);
+        enemy3 = GenerateObstacleEnemy(enemy2.transform.position.x + 5);
+        enemy4 = GenerateObstacleEnemy(enemy3.transform.position.x + 5);
     }
 
-    GameObject GenerateObstacle(float referenceX)
+    GameObject GenerateObstacleEspinho(float referenceX)
     {
         GameObject obstacle = GameObject.Instantiate(espinho);
-        SetTransform(obstacle, referenceX);
+        SetTransformEspinho(obstacle, referenceX);
         return obstacle;
     }
 
-    void SetTransform(GameObject obstacle, float referenceX)
+    GameObject GenerateObstacleEnemy(float referenceX)
+    {
+        GameObject obstacle = GameObject.Instantiate(enemy);
+        SetTransformEnemy(obstacle, referenceX);
+        return obstacle;
+    }
+
+    void SetTransformEspinho(GameObject obstacle, float referenceX)
     {
         // ideal -0.5f
         obstacle.transform.position = new Vector3(referenceX + Random.Range(minObsSpacing, maxObsSpacing), -0.5f, 0); 
+    }
+
+    void SetTransformEnemy(GameObject obstacle, float referenceX)
+    {
+        // ideal Random.Range(minObsY, maxObsY)
+        obstacle.transform.position = new Vector3(referenceX + Random.Range(minObsSpacing, maxObsSpacing), Random.Range(minObsY, maxObsY), 0); 
     }
 
     // Update is called once per frame
@@ -73,8 +95,19 @@ public class MapGenerator : MonoBehaviour
             espinho2 = espinho3;
             espinho3 = espinho4;
 
-            SetTransform(tempObstacle, espinho3.transform.position.x);
+            SetTransformEspinho(tempObstacle, espinho3.transform.position.x);
             espinho4 = tempObstacle;
+        }
+
+        if (player.transform.position.x > enemy2.transform.position.x)
+        {
+            var tempObstacleEnemy = enemy1;
+            enemy1 = enemy2;
+            enemy2 = enemy3;
+            enemy3 = enemy4;
+
+            SetTransformEnemy(tempObstacleEnemy, enemy3.transform.position.x);
+            enemy4 = tempObstacleEnemy;
         }
         
     }
