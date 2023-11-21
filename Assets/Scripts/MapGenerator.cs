@@ -26,6 +26,12 @@ public class MapGenerator : MonoBehaviour
     private GameObject enemy3;
     private GameObject enemy4;
 
+    public GameObject moeda;
+    private GameObject moeda1;
+    private GameObject moeda2;
+    private GameObject moeda3;
+    private GameObject moeda4;
+
     public float minObsY;
     public float maxObsY;
 
@@ -43,6 +49,11 @@ public class MapGenerator : MonoBehaviour
         enemy2 = GenerateObstacleEnemy(enemy1.transform.position.x + 5);
         enemy3 = GenerateObstacleEnemy(enemy2.transform.position.x + 5);
         enemy4 = GenerateObstacleEnemy(enemy3.transform.position.x + 5);
+
+        moeda1 = GenerateObstacleMoeda(player.transform.position.x + 3);
+        moeda2 = GenerateObstacleMoeda(moeda1.transform.position.x + 4);
+        moeda3 = GenerateObstacleMoeda(moeda2.transform.position.x + 5);
+        moeda4 = GenerateObstacleMoeda(moeda3.transform.position.x + 5);
     }
 
     GameObject GenerateObstacleEspinho(float referenceX)
@@ -59,6 +70,13 @@ public class MapGenerator : MonoBehaviour
         return obstacle;
     }
 
+    GameObject GenerateObstacleMoeda(float referenceX)
+    {
+        GameObject obstacle = GameObject.Instantiate(moeda);
+        SetTransformMoeda(obstacle, referenceX);
+        return obstacle;
+    }
+
     void SetTransformEspinho(GameObject obstacle, float referenceX)
     {
         // ideal -0.5f
@@ -66,6 +84,12 @@ public class MapGenerator : MonoBehaviour
     }
 
     void SetTransformEnemy(GameObject obstacle, float referenceX)
+    {
+        // ideal Random.Range(minObsY, maxObsY)
+        obstacle.transform.position = new Vector3(referenceX + Random.Range(minObsSpacing, maxObsSpacing), Random.Range(minObsY, maxObsY), 0); 
+    }
+
+    void SetTransformMoeda(GameObject obstacle, float referenceX)
     {
         // ideal Random.Range(minObsY, maxObsY)
         obstacle.transform.position = new Vector3(referenceX + Random.Range(minObsSpacing, maxObsSpacing), Random.Range(minObsY, maxObsY), 0); 
@@ -108,6 +132,17 @@ public class MapGenerator : MonoBehaviour
 
             SetTransformEnemy(tempObstacleEnemy, enemy3.transform.position.x);
             enemy4 = tempObstacleEnemy;
+        }
+
+        if (player.transform.position.x > moeda2.transform.position.x)
+        {
+            var tempObstacleMoeda = moeda1;
+            moeda1 = moeda2;
+            moeda2 = moeda3;
+            moeda3 = moeda4;
+
+            SetTransformMoeda(tempObstacleMoeda, moeda3.transform.position.x);
+            moeda4 = tempObstacleMoeda;
         }
         
     }
