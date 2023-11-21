@@ -50,18 +50,25 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    //  void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isJumping = false;
-    //     }
-    // }
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        gameOver = true;
-        rb.isKinematic = true;
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            gameOver = true;
+        }
+
+        if (collider.gameObject.CompareTag("Moeda"))
+        {
+            
+        }
     }
 
     public void OnJumpTap()
