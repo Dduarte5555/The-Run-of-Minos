@@ -988,8 +988,9 @@ MonoBehaviour:
   moeda: {fileID: 7763565352633162729, guid: 3e3d70f84308c254daeb984ba35e84fb, type: 3}
   minObsY: 0
   maxObsY: 5.5
-  minObsSpacing: 10
+  minObsSpacing: 12
   maxObsSpacing: 20
+  numberOfObjects: 5
 --- !u!4 &965600453
 Transform:
   m_ObjectHideFlags: 0
