@@ -93,6 +93,7 @@ public class MapGenerator : MonoBehaviour
     {
         // ideal Random.Range(minObsY, maxObsY)
         obstacle.transform.position = new Vector3(referenceX + Random.Range(minObsSpacing, maxObsSpacing), Random.Range(minObsY, maxObsY), 0); 
+        obstacle.SetActive(true);
     }
 
     // Update is called once per frame

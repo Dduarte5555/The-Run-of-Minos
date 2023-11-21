@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class InputManager : MonoBehaviour
 {
     public float jumpForce = 5f; // Adjust the jump force in the Inspector
 
+    public int coins = 0;
+    public TextMeshProUGUI coinsText;
     public float Speed = 5f;
     private bool isJumping = false;
     private Rigidbody2D rb;
@@ -25,6 +28,7 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        coinsText.text = "Coins: " + coins.ToString();
     }
 
     void Update()
@@ -67,7 +71,9 @@ public class InputManager : MonoBehaviour
 
         if (collider.gameObject.CompareTag("Moeda"))
         {
-            
+            coins++;
+            collider.gameObject.SetActive(false);
+            coinsText.text = "Coins: " + coins.ToString();
         }
     }
 
