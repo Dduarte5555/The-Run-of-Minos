@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 82d1e5a2ba4e04a4d8363947556697cf, type: 3}
-    volume: 0.5
+    volume: 0.15
     pitch: 1.1
     loop: 1
     source: {fileID: 0}
@@ -56,4 +56,40 @@ MonoBehaviour:
     volume: 0.75
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: e74158c6046bdcf4383eaa2771eea9b7, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 78ad6379236b9a846bbc01cda6a483a5, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 481cc9e396c7c4e4fbaa023730b11f9e, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: e2169cdc7313700479ee2ad84c7440b3, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SlowTime
+    clip: {fileID: 8300000, guid: fe5dcc440f806834e88c86ecb58ddc0e, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Shield
+    clip: {fileID: 8300000, guid: f616986f6d9cff84ebe4ef17d9d9f049, type: 3}
+    volume: 0.75
+    pitch: 1.2
+    loop: 1
     source: {fileID: 0}
