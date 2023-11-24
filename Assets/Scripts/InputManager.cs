@@ -66,6 +66,7 @@ public class InputManager : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Enemy"))
         {
+            FindObjectOfType<AudioManager>().Play("GameOver");  
             gameOver = true;
         }
 
@@ -73,6 +74,7 @@ public class InputManager : MonoBehaviour
         {
             coins++;
             collider.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("Coin");      
             coinsText.text = "Coins: " + coins.ToString();
             if(coins>=2){
                 Time.timeScale = 0;
@@ -85,8 +87,7 @@ public class InputManager : MonoBehaviour
     {   
         // rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
-        Debug.Log("Apertou");
-        
+        FindObjectOfType<AudioManager>().Play("Jump");        
     }
 
     // public void OnRightHold()
