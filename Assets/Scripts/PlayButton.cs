@@ -28,6 +28,9 @@ public class PlayButton : MonoBehaviour
     public void OnPlayButton ()
     {
         FindObjectOfType<AudioManager>().Play("Play");
+        PlayerPrefs.SetFloat("SavedTime", 1.0f);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Scenes/MapDevelopment");
+
     }
 }
