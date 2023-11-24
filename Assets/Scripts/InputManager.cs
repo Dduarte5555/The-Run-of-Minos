@@ -74,6 +74,10 @@ public class InputManager : MonoBehaviour
             coins++;
             collider.gameObject.SetActive(false);
             coinsText.text = "Coins: " + coins.ToString();
+            if(coins>=2){
+                Time.timeScale = 0;
+                SceneManager.LoadScene("Scenes/Menu_power_up");
+            }
         }
     }
 
