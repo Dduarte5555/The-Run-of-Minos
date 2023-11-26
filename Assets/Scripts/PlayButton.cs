@@ -12,8 +12,13 @@ public class PlayButton : MonoBehaviour
 
     void Start()
     {
-        int score = PlayerPrefs.GetInt("Score", 0);
-        int maxScore = PlayerPrefs.GetInt("MaxScore", 0);
+        float score = PlayerPrefs.GetFloat("Pontuacao", 0.0F);
+        float maxScore = PlayerPrefs.GetFloat("Recorde", 0.0F);
+    
+        if (score > maxScore){
+            maxScore = score;
+            PlayerPrefs.SetFloat("Recorde", score);
+        }
 
         if (scoreText) 
         {
@@ -30,6 +35,7 @@ public class PlayButton : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Play");
         PlayerPrefs.SetFloat("SavedTime", 1.0f);
         PlayerPrefs.Save();
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/MapDevelopment");
 
     }
