@@ -10,6 +10,7 @@ public class Menu_power_up : MonoBehaviour
     // public TextMeshProUGUI scoreText;
     // public TextMeshProUGUI maxScoreText;
     private float time;
+    private bool invencible = false;
 
     void Start()
     {
@@ -31,11 +32,20 @@ public class Menu_power_up : MonoBehaviour
     {
         // FindObjectOfType<AudioManager>().Play("Play");
         Debug.Log("Time: " + time);
-        time = time * 1.1F;
-        PlayerPrefs.SetFloat("SavedTime", time);
-        PlayerPrefs.Save(); // Isso salva as PlayerPrefs imediatamente
-        Time.timeScale = time;
+        // time = time * 1.1F;
+        // PlayerPrefs.SetFloat("SavedTime", time);
+        // PlayerPrefs.Save(); 
+        Time.timeScale = 0.75F;
         Debug.Log("Time: " + time);
         SceneManager.LoadScene("Scenes/MapDevelopment");
+    }
+
+    public void Invencible()
+    {   
+        invencible = !invencible;
+        //SaveBoolToPlayerPrefs(invencible, true);
+        PlayerPrefs.SetInt(invencible, 1);
+        PlayerPrefs.Save();
+        
     }
 }

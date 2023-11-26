@@ -10,9 +10,13 @@ public class InputManager : MonoBehaviour
     public float jumpForce = 5f; // Adjust the jump force in the Inspector
 
     public int coins = 0;
+    public float tempo_power_up = 0F;
+    public float tempo = 0F;
+    private float time;
     public TextMeshProUGUI coinsText;
     public float Speed = 5f;
     private bool isJumping = false;
+    private bool invencible = false;
     private Rigidbody2D rb;
     public Rigidbody2D teto1;
     public Rigidbody2D teto2;
@@ -48,8 +52,30 @@ public class InputManager : MonoBehaviour
         enemy.velocity = new Vector2(Speed,0);
         espinho.velocity = new Vector2(Speed,0);
         moeda.velocity = new Vector2(Speed,0);
+          
+        tempo_power_up = tempo_power_up + Time.deltaTime;
+        tempo = tempo + Time.deltaTime;
 
+        if (tempo_power_up > 5){
+            time = PlayerPrefs.GetFloat("SavedTime", 1.0f);
+            Time.timeScale = time;
+            if (PlayerPrefs.GetInt(invencible, 0)){
+                Invencible();
+            }
+            //Debug.Log("Time, sai do power pu: " + time); 
+        }
+        if (tempo > 7){
+            time = PlayerPrefs.GetFloat("SavedTime", 1.0f);
+            time = time * 1.1F;
+            PlayerPrefs.SetFloat("SavedTime", time);
+            PlayerPrefs.Save(); 
+            Time.timeScale = time;
+            tempo = 0F;
+        
+            Debug.Log("AUMENTEI VELO: " + time); 
+        }
         if (gameOver){
+            Time.timeScale = 0;
             SceneManager.LoadScene("Scenes/MenuFinal");
         }
     }
@@ -62,9 +88,22 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public void Invencible()
+    {
+        //invencible = GetBoolFromPlayerPrefs(invencible);
+        invencible = PlayerPrefs.GetInt(invencible, 0);
+        invencible = !invencible;
+        PlayerPrefs.SetInt(invencible, 0);
+        PlayerPrefs.Save();
+        
+
+        //SaveBoolToPlayerPrefs(invencible, invencible);
+    }
+    
+
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag("Enemy") && !PlayerPrefs.GetInt(invencible, 0) )
         {
             gameOver = true;
         }
