@@ -38,6 +38,8 @@ public class Menu_power_up : MonoBehaviour
         Time.timeScale = 0.75F;
         Debug.Log("Time: " + time);
         SceneManager.LoadScene("Scenes/MapDevelopment");
+        // FindObjectOfType<AudioManager>().Play("PowerUp"); 
+        // FindObjectOfType<AudioManager>().Play("Shield"); 
     }
 
     public void Invencible()
