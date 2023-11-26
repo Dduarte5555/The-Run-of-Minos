@@ -44,10 +44,10 @@ public class Menu_power_up : MonoBehaviour
 
     public void Invencible()
     {   
-        invencible = !invencible;
-        //SaveBoolToPlayerPrefs(invencible, true);
-        PlayerPrefs.SetInt(invencible, 1);
-        PlayerPrefs.Save();
+        // invencible = !invencible;
+        // //SaveBoolToPlayerPrefs(invencible, true);
+        // PlayerPrefs.SetInt(invencible, 1);
+        // PlayerPrefs.Save();
         
     }
 }
