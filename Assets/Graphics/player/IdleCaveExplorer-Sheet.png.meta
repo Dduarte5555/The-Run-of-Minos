@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: b02ad61adbb47432db3581445b0cbaf5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 13}
+        - {x: -16, y: 13}
+        - {x: -20, y: 3}
+        - {x: -20, y: -13}
+        - {x: -18, y: -16}
+        - {x: 1, y: -16}
+        - {x: 9, y: 3}
+        - {x: 9, y: 7}
+        - {x: 5, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970a7225aecd940108b1a767712ccb26
+      internalID: 1500461232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 13}
+        - {x: -20, y: 3}
+        - {x: -20, y: -7}
+        - {x: -17, y: -16}
+        - {x: 3, y: -16}
+        - {x: 10, y: 1}
+        - {x: 10, y: 12}
+        - {x: 7, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56094e212d1e54635988ccfc6052d9fe
+      internalID: 513459932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 12}
+        - {x: -20, y: 2}
+        - {x: -20, y: -8}
+        - {x: -18, y: -16}
+        - {x: 3, y: -16}
+        - {x: 10, y: 5}
+        - {x: 10, y: 8}
+        - {x: 6, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f1c164504e240e4be5c8d7f991e777
+      internalID: 1952323134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 14}
+        - {x: 3, y: 11}
+        - {x: -4, y: 13}
+        - {x: -11, y: 13}
+        - {x: -20, y: 2}
+        - {x: -20, y: -8}
+        - {x: -17, y: -16}
+        - {x: 3, y: -16}
+        - {x: 11, y: 6}
+        - {x: 11, y: 10}
+        - {x: 7, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1592dd6370de4d2ab06fc62ebb5ffab
+      internalID: 1807804821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 9, y: 12}
+        - {x: 3, y: 6}
+        - {x: -4, y: 12}
+        - {x: -12, y: 12}
+        - {x: -19, y: 1}
+        - {x: -19, y: -9}
+        - {x: -17, y: -16}
+        - {x: 1, y: -16}
+        - {x: 12, y: 0}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865b757ad157b45b4aabab3a0c1df63a
+      internalID: -1002112847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -19, y: 1}
+        - {x: -19, y: -9}
+        - {x: -17, y: -16}
+        - {x: 5, y: -16}
+        - {x: 12, y: 1}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05481618e1dfc434aa02e415936ad5ae
+      internalID: 445962069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 9}
+        - {x: 2, y: 7}
+        - {x: -4, y: 11}
+        - {x: -11, y: 11}
+        - {x: -19, y: 1}
+        - {x: -19, y: -16}
+        - {x: 4, y: -16}
+        - {x: 10, y: -2}
+        - {x: 10, y: 8}
+        - {x: 6, y: 9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b8db425eb1d46408023afff8c2079b
+      internalID: -650686567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 11}
+        - {x: 2, y: 10}
+        - {x: 1, y: 7}
+        - {x: -4, y: 11}
+        - {x: -12, y: 11}
+        - {x: -19, y: 0}
+        - {x: -19, y: -9}
+        - {x: -17, y: -16}
+        - {x: 2, y: -16}
+        - {x: 11, y: 3}
+        - {x: 11, y: 9}
+        - {x: 7, y: 11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a59ad6cc66284721830386750945f9d
+      internalID: -1987674159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 12}
+        - {x: -20, y: 4}
+        - {x: -20, y: -11}
+        - {x: -19, y: -16}
+        - {x: 1, y: -16}
+        - {x: 10, y: -3}
+        - {x: 10, y: 11}
+        - {x: 9, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5896d28abd55e44c09c22425c24d0a56
+      internalID: -97160586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCaveExplorer-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -13, y: 13}
+        - {x: -20, y: 7}
+        - {x: -20, y: -15}
+        - {x: -19, y: -16}
+        - {x: 2, y: -16}
+        - {x: 10, y: -3}
+        - {x: 10, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeafaab4d6354ea183079eee1ae80cf
+      internalID: -613127765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      IdleCaveExplorer-Sheet_0: 1500461232
+      IdleCaveExplorer-Sheet_1: 513459932
+      IdleCaveExplorer-Sheet_2: 1952323134
+      IdleCaveExplorer-Sheet_3: 1807804821
+      IdleCaveExplorer-Sheet_4: -1002112847
+      IdleCaveExplorer-Sheet_5: 445962069
+      IdleCaveExplorer-Sheet_6: -650686567
+      IdleCaveExplorer-Sheet_7: -1987674159
+      IdleCaveExplorer-Sheet_8: -97160586
+      IdleCaveExplorer-Sheet_9: -613127765
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

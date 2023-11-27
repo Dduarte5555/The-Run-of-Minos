@@ -1,0 +1,438 @@
+fileFormatVersion: 2
+guid: 8b252a934b3524316a977fbeef5c3e24
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 22
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 12}
+        - {x: 3, y: 10}
+        - {x: 2, y: 5}
+        - {x: -1, y: 9}
+        - {x: -4, y: 12}
+        - {x: -9, y: 12}
+        - {x: -19, y: 2}
+        - {x: -19, y: -10}
+        - {x: -17, y: -16}
+        - {x: 2, y: -16}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 7, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfb6765bc9f9440f90e2fe8a93053ef
+      internalID: 1279268799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -15, y: 11}
+        - {x: -20, y: -1}
+        - {x: -20, y: -14}
+        - {x: -18, y: -16}
+        - {x: 0, y: -16}
+        - {x: 11, y: 0}
+        - {x: 11, y: 11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e9a12369f694e61bd87a025ee898dd
+      internalID: 228309846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -17, y: 13}
+        - {x: -19, y: 7}
+        - {x: -19, y: -16}
+        - {x: 0, y: -16}
+        - {x: 11, y: -1}
+        - {x: 11, y: 8}
+        - {x: 10, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a721a2d8062794470ac5ffeeb6c09202
+      internalID: -19726743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 15}
+        - {x: 3, y: 12}
+        - {x: -4, y: 14}
+        - {x: -11, y: 14}
+        - {x: -19, y: 4}
+        - {x: -20, y: -1}
+        - {x: -20, y: -10}
+        - {x: -19, y: -16}
+        - {x: 4, y: -16}
+        - {x: 11, y: -13}
+        - {x: 11, y: 11}
+        - {x: 7, y: 15}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485776d73d1c74b73b5add3e85a7ef0b
+      internalID: -1207306192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -19, y: 12}
+        - {x: -19, y: -12}
+        - {x: -15, y: -16}
+        - {x: -2, y: -16}
+        - {x: 12, y: 0}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf5964e6c2f341e1941bee9b3e6a1c4
+      internalID: 800986933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -20, y: 2}
+        - {x: -20, y: -10}
+        - {x: -15, y: -16}
+        - {x: -3, y: -16}
+        - {x: 11, y: -3}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52341f101df6a448689d24fbd9ffcb6e
+      internalID: 1260619619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: 12}
+        - {x: -13, y: 12}
+        - {x: -20, y: 3}
+        - {x: -20, y: -13}
+        - {x: -13, y: -16}
+        - {x: -1, y: -16}
+        - {x: 8, y: -3}
+        - {x: 9, y: 2}
+        - {x: 9, y: 9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2c3689c4fdb4f3397a2cb666577097
+      internalID: 249556035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 10, y: 11}
+        - {x: 5, y: 13}
+        - {x: 3, y: 13}
+        - {x: 1, y: 12}
+        - {x: 0, y: 9}
+        - {x: -5, y: 13}
+        - {x: -12, y: 13}
+        - {x: -19, y: 4}
+        - {x: -20, y: -1}
+        - {x: -20, y: -9}
+        - {x: -15, y: -16}
+        - {x: -2, y: -16}
+        - {x: 5, y: -6}
+        - {x: 9, y: 3}
+        - {x: 10, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11525c9de56b41318503cfaf37140d4
+      internalID: 1113967139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingCaveExplorer-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: 13}
+        - {x: 0, y: 10}
+        - {x: -5, y: 13}
+        - {x: -13, y: 13}
+        - {x: -20, y: 9}
+        - {x: -20, y: -11}
+        - {x: -19, y: -16}
+        - {x: 1, y: -16}
+        - {x: 10, y: 2}
+        - {x: 10, y: 10}
+        - {x: 8, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dec57476e444b5c856569d45c0bec9
+      internalID: -791578110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WalkingCaveExplorer-Sheet_0: 1279268799
+      WalkingCaveExplorer-Sheet_1: 228309846
+      WalkingCaveExplorer-Sheet_2: -19726743
+      WalkingCaveExplorer-Sheet_3: -1207306192
+      WalkingCaveExplorer-Sheet_4: 800986933
+      WalkingCaveExplorer-Sheet_5: 1260619619
+      WalkingCaveExplorer-Sheet_6: 249556035
+      WalkingCaveExplorer-Sheet_7: 1113967139
+      WalkingCaveExplorer-Sheet_8: -791578110
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
