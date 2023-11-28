@@ -3,7 +3,17 @@ guid: b119a5ab9b9409047847757ee9815534
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Canvas: {instanceID: 0}
+  - coinsText: {instanceID: 0}
+  - recorde: {instanceID: 0}
+  - teto1: {instanceID: 0}
+  - teto2: {instanceID: 0}
+  - chao1: {instanceID: 0}
+  - chao2: {instanceID: 0}
+  - enemy: {instanceID: 0}
+  - espinho: {instanceID: 0}
+  - moeda: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
