@@ -81,7 +81,10 @@ public class InputManager : MonoBehaviour
                 PlayerPrefs.SetFloat("Invincible", 0F);
                 PlayerPrefs.Save();
             }
-            
+
+
+            FindObjectOfType<AudioManager>().Stop("SlowTime");
+            FindObjectOfType<AudioManager>().Stop("Shield");
         }
         if (gameOver){
             Time.timeScale = 0;
@@ -101,7 +104,7 @@ public class InputManager : MonoBehaviour
     {
         //invincible = GetBoolFromPlayerPrefs(invincible);
         // invincible = PlayerPrefs.GetInt(invincible, 0);
-        FindObjectOfType<AudioManager>().Play("PowerUp");
+        FindObjectOfType<AudioManager>().Play("Shield");
         invincible = true;
         PlayerPrefs.SetFloat("Invincible", 1F);
         PlayerPrefs.Save();
@@ -161,8 +164,7 @@ public class InputManager : MonoBehaviour
     }
     public void OnSlowButton ()
     {
-        // FindObjectOfType<AudioManager>().Play("Play");
-        FindObjectOfType<AudioManager>().Play("PowerUp");
+        FindObjectOfType<AudioManager>().Play("SlowTime");
         Debug.Log("Time: " + time);
         Time.timeScale = 0.5F;
         Debug.Log("Time: " + time);
@@ -171,6 +173,5 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetFloat("OnGame", 1);
         PlayerPrefs.Save();
         Canvas.gameObject.SetActive(false); 
-        //FindObjectOfType<AudioManager>().Play("Shield"); 
     }
 }
