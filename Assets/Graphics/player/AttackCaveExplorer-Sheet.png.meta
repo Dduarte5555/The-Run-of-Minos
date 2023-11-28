@@ -1,0 +1,573 @@
+fileFormatVersion: 2
+guid: f5d0522e5644e40fdbfd56f76b9b5f15
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -18, y: 13}
+        - {x: -20, y: 6}
+        - {x: -20, y: -7}
+        - {x: -17, y: -16}
+        - {x: 2, y: -16}
+        - {x: 10, y: -2}
+        - {x: 10, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d690f37f527f4260984bb91dea243dc
+      internalID: 527250863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: 14}
+        - {x: 1, y: 16}
+        - {x: -8, y: 16}
+        - {x: -13, y: 15}
+        - {x: -22, y: 6}
+        - {x: -22, y: -8}
+        - {x: -20, y: -16}
+        - {x: -1, y: -16}
+        - {x: 1, y: -14}
+        - {x: 2, y: -9}
+        - {x: 5, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3312d6ac3bc04908a4715347b934e52
+      internalID: 467565656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -22, y: 16}
+        - {x: -22, y: -14}
+        - {x: -20, y: -16}
+        - {x: 1, y: -16}
+        - {x: 1, y: 1}
+        - {x: -2, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf2ddb1bf9b3427fa0ca508e30db2c5
+      internalID: 2028389532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -22, y: 16}
+        - {x: -22, y: -16}
+        - {x: -3, y: -16}
+        - {x: 1, y: -15}
+        - {x: 1, y: -7}
+        - {x: -4, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205317c148f9b4624ae775004b576b45
+      internalID: -283641714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -22, y: 13}
+        - {x: -22, y: -12}
+        - {x: -18, y: -16}
+        - {x: 1, y: -16}
+        - {x: 1, y: -4}
+        - {x: -5, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97126f3a7af0b4b74bbaa5eca48f8078
+      internalID: 1649075868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: 9}
+        - {x: 0, y: 15}
+        - {x: -9, y: 15}
+        - {x: -17, y: 12}
+        - {x: -17, y: -16}
+        - {x: 6, y: -16}
+        - {x: 9, y: -11}
+        - {x: 11, y: -8}
+        - {x: 11, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c24d41462c242dabb9224aacc2c028
+      internalID: 566320510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: 15}
+        - {x: -10, y: 15}
+        - {x: -17, y: 12}
+        - {x: -17, y: -10}
+        - {x: -16, y: -16}
+        - {x: 6, y: -16}
+        - {x: 13, y: -10}
+        - {x: 13, y: 0}
+        - {x: 3, y: 14}
+      - - {x: 2, y: -3}
+        - {x: 2, y: 0}
+        - {x: 1, y: 1}
+        - {x: 1, y: 6}
+        - {x: -3, y: 10}
+        - {x: -5, y: 9}
+        - {x: 0, y: 4}
+        - {x: 0, y: 1}
+        - {x: 3, y: -3}
+        - {x: 3, y: -4}
+        - {x: 3, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e05eccf1dcfb434fa468bd93fdbec6d
+      internalID: -537304422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -1, y: 16}
+        - {x: -8, y: 16}
+        - {x: -17, y: 3}
+        - {x: -17, y: -16}
+        - {x: 2, y: -16}
+        - {x: 13, y: -7}
+        - {x: 13, y: -5}
+        - {x: 12, y: 2}
+      - - {x: 2, y: -3}
+        - {x: 2, y: 0}
+        - {x: 0, y: 4}
+        - {x: 2, y: 1}
+        - {x: 2, y: 0}
+        - {x: 5, y: -3}
+        - {x: 6, y: -2}
+        - {x: 5, y: -1}
+        - {x: 2, y: -4}
+        - {x: 3, y: -4}
+        - {x: 3, y: -3}
+      - - {x: -17, y: 11}
+        - {x: -17, y: 10}
+        - {x: -15, y: 8}
+        - {x: -12, y: 8}
+        - {x: -7, y: 11}
+        - {x: -8, y: 14}
+        - {x: -14, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5aa40b7a492429ea88d3b0ec94efca
+      internalID: 1619493123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 11, y: 0}
+        - {x: 7, y: 0}
+        - {x: 3, y: -3}
+        - {x: 2, y: 3}
+        - {x: 9, y: 0}
+        - {x: 11, y: 2}
+        - {x: 12, y: 5}
+        - {x: 2, y: 10}
+        - {x: -10, y: 10}
+        - {x: -17, y: 0}
+        - {x: -17, y: -9}
+        - {x: -16, y: -16}
+        - {x: 3, y: -16}
+        - {x: 13, y: -6}
+        - {x: 13, y: -2}
+      - - {x: -16, y: 14}
+        - {x: -16, y: 12}
+        - {x: -14, y: 10}
+        - {x: -10, y: 11}
+        - {x: -8, y: 13}
+        - {x: -9, y: 16}
+        - {x: -14, y: 16}
+      - - {x: -2, y: 14}
+        - {x: -2, y: 16}
+        - {x: -7, y: 16}
+        - {x: -5, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d58a8200e344305be24e7bec67baec
+      internalID: -2049781760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: 10}
+        - {x: -10, y: 10}
+        - {x: -17, y: 0}
+        - {x: -17, y: -16}
+        - {x: 6, y: -16}
+        - {x: 12, y: -8}
+        - {x: 13, y: 0}
+        - {x: 10, y: 2}
+      - - {x: 1, y: 9}
+        - {x: 4, y: 6}
+        - {x: 7, y: 7}
+        - {x: 7, y: 9}
+        - {x: 4, y: 12}
+        - {x: 2, y: 12}
+      - - {x: -15, y: 16}
+        - {x: -16, y: 15}
+        - {x: -15, y: 12}
+        - {x: -11, y: 12}
+        - {x: -9, y: 14}
+        - {x: -10, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c1c0ebe39cc40e8ab4211b2cd1d891
+      internalID: 1837620464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: 8}
+        - {x: -2, y: 10}
+        - {x: -11, y: 10}
+        - {x: -17, y: 1}
+        - {x: -17, y: -16}
+        - {x: 7, y: -16}
+        - {x: 11, y: -13}
+        - {x: 12, y: -9}
+        - {x: 12, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daf2ceff0b824538bddf86a4b79660f
+      internalID: -1642298466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackCaveExplorer-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: 12}
+        - {x: -11, y: 12}
+        - {x: -18, y: 5}
+        - {x: -18, y: -13}
+        - {x: -17, y: -16}
+        - {x: 1, y: -16}
+        - {x: 12, y: 1}
+        - {x: 12, y: 4}
+        - {x: 1, y: 11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: be693cffd8ba643b9b1ab3999107058e
+      internalID: -992894850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AttackCaveExplorer-Sheet_0: 527250863
+      AttackCaveExplorer-Sheet_1: 467565656
+      AttackCaveExplorer-Sheet_10: -1642298466
+      AttackCaveExplorer-Sheet_11: -992894850
+      AttackCaveExplorer-Sheet_2: 2028389532
+      AttackCaveExplorer-Sheet_3: -283641714
+      AttackCaveExplorer-Sheet_4: 1649075868
+      AttackCaveExplorer-Sheet_5: 566320510
+      AttackCaveExplorer-Sheet_6: -537304422
+      AttackCaveExplorer-Sheet_7: 1619493123
+      AttackCaveExplorer-Sheet_8: -2049781760
+      AttackCaveExplorer-Sheet_9: 1837620464
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
