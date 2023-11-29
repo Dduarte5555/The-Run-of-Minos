@@ -14,6 +14,7 @@ public class PlayButton : MonoBehaviour
     {
         float score = PlayerPrefs.GetFloat("Pontuacao", 0.0F);
         float maxScore = PlayerPrefs.GetFloat("Recorde", 0.0F);
+        PlayerPrefs.SetFloat("Pontuacao",0);
     
         if (score > maxScore){
             maxScore = score;
@@ -36,6 +37,7 @@ public class PlayButton : MonoBehaviour
         PlayerPrefs.SetFloat("SavedTime", 1.0f);
         PlayerPrefs.Save();
         Time.timeScale = 1;
+        PlayerPrefs.SetFloat("OnGame", 1);
         SceneManager.LoadScene("Scenes/MapDevelopment");
 
     }
