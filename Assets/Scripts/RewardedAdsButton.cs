@@ -7,7 +7,9 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
     [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
+    [SerializeField] private Canvas Canvas_Morte;
     string _adUnitId = null; // This will remain null for unsupported platforms
+    float time;
  
     void Awake()
     {   
@@ -48,7 +50,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
     public void ShowAd()
     {
         // Disable the button:
-        _showAdButton.interactable = false;
+        //_showAdButton.interactable = false;
         // Then show the ad:
         Advertisement.Show(_adUnitId, this);
     }
@@ -60,6 +62,11 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
+            Canvas_Morte.gameObject.SetActive(false);
+            time = PlayerPrefs.GetFloat("SavedTime", 1.0f);
+            Time.timeScale = time;
+            PlayerPrefs.SetFloat("OnGame", 1);
+            PlayerPrefs.Save();
             Debug.Log("Você ganhou mais uma vida");
         }
     }

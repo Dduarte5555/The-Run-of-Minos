@@ -9,6 +9,8 @@ public class InputManager : MonoBehaviour
 {
     public float jumpForce = 5f; // Adjust the jump force in the Inspector
     [SerializeField] private Canvas Canvas;
+    [SerializeField] private Canvas Canvas_Morte;
+    [SerializeField] AdsInitializer adsInitializer;
     public int coins = 0;
     public float tempo_power_up = 0F;
     public float tempo = 0F;
@@ -32,11 +34,12 @@ public class InputManager : MonoBehaviour
     public bool gameOver = false;
 
     void Start()
-    {
+    {  
         rb = GetComponent<Rigidbody2D>();
         coinsText.text = "Coins: " + coins.ToString();
         recorde.text = tempo_recorde.ToString();
         recorde.text = " " + PlayerPrefs.GetFloat("Pontuacao", 1.0f).ToString();
+
         
     }
 
@@ -62,21 +65,24 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
         PlayerPrefs.Save(); 
         tempo = tempo + Time.unscaledDeltaTime;
-
+        Debug.Log("Valor inicial: " + PlayerPrefs.GetFloat("OnGame", 1.0f));
         if (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1){
             tempo_recorde = tempo_recorde + Time.unscaledDeltaTime;
             PlayerPrefs.SetFloat("Pontuacao", tempo_recorde);
             PlayerPrefs.Save();
             recorde.text = " " + tempo_recorde.ToString();
+            Debug.Log("contando: " + time);
         }
         
         if ((tempo > 7) && (tempo_power_up > 5) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){
+
             time = time * 1.1F;
             Time.timeScale = time;
             tempo = 0F;
             PlayerPrefs.SetFloat("SavedTime", time);
             PlayerPrefs.Save();
             Debug.Log("AUMENTEI VELO: " + time); 
+            
             if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1){
                 PlayerPrefs.SetFloat("Invincible", 0F);
                 PlayerPrefs.Save();
@@ -102,10 +108,7 @@ public class InputManager : MonoBehaviour
 
     public void Invincible()
     {
-        //invincible = GetBoolFromPlayerPrefs(invincible);
-        // invincible = PlayerPrefs.GetInt(invincible, 0);
         FindObjectOfType<AudioManager>().Play("Shield");
-        invincible = true;
         PlayerPrefs.SetFloat("Invincible", 1F);
         PlayerPrefs.Save();
         time = PlayerPrefs.GetFloat("SavedTime", 1.0f);
@@ -114,20 +117,25 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
         PlayerPrefs.SetFloat("OnGame", 1);
         PlayerPrefs.Save();
-        Debug.Log("InvencicleSS: " + invincible); 
         Canvas.gameObject.SetActive(false);
         
+    }
 
-        //SaveBoolToPlayerPrefs(invincible, invincible);
+    public void OnNo(){
+
+        FindObjectOfType<AudioManager>().Play("GameOver");  
+        gameOver = true;
     }
     
 
     void OnTriggerEnter2D(Collider2D collider)
     {   Debug.Log("INCREIBEL: " + PlayerPrefs.GetFloat("Invincible", 3.0f));
         if (collider.gameObject.CompareTag("Enemy") && PlayerPrefs.GetFloat("Invincible", 3.0f) == 0)
-        {
-            FindObjectOfType<AudioManager>().Play("GameOver");  
-            gameOver = true;
+        {   
+            Time.timeScale = 0;
+            PlayerPrefs.SetFloat("OnGame", 0);
+            adsInitializer.InitializeAds();
+            Canvas_Morte.gameObject.SetActive(true);
         }
 
         if (collider.gameObject.CompareTag("Moeda"))
@@ -140,6 +148,7 @@ public class InputManager : MonoBehaviour
                 Time.timeScale = 0;
                 coins = 0;
                 PlayerPrefs.SetFloat("OnGame", 0);
+                coinsText.text = "Coins: " + coins.ToString();
                 Canvas.gameObject.SetActive(true);
             }
         }
@@ -165,13 +174,25 @@ public class InputManager : MonoBehaviour
     public void OnSlowButton ()
     {
         FindObjectOfType<AudioManager>().Play("SlowTime");
-        Debug.Log("Time: " + time);
         Time.timeScale = 0.5F;
-        Debug.Log("Time: " + time);
         tempo_power_up = 0;
         PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
         PlayerPrefs.SetFloat("OnGame", 1);
         PlayerPrefs.Save();
         Canvas.gameObject.SetActive(false); 
+    }
+
+
+    public void OnDashButton()
+    {
+        
+        PlayerPrefs.SetFloat("Invincible", 1F);
+        Time.timeScale = 10F;
+        tempo_power_up = 0;
+        PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
+        PlayerPrefs.SetFloat("OnGame", 1);
+        PlayerPrefs.Save(); 
+        Canvas.gameObject.SetActive(false);
+        
     }
 }

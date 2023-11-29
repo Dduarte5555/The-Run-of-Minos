@@ -9,10 +9,11 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     [SerializeField] RewardedAdsButton rewardedAdsButton;
     private string _gameId;
  
-    void Awake()
+    void Start()
     {
         InitializeAds();
-    }
+    }   
+    
  
     public void InitializeAds()
     {
@@ -23,11 +24,16 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     #elif UNITY_EDITOR
             _gameId = _androidGameId; //Only for testing the functionality in the Editor
     #endif
+        //Debug.Log("INITIALIZED",Advertisement.isInitialized);
         if (!Advertisement.isInitialized && Advertisement.isSupported)
         {
             Advertisement.Initialize(_gameId, _testMode, this);
         }
+        if(Advertisement.isInitialized && Advertisement.isSupported){
+            OnInitializationComplete();
+        }
     }
+    
 
  
     public void OnInitializationComplete()
