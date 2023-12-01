@@ -32,8 +32,6 @@ public class InputManager : MonoBehaviour
     public Rigidbody2D moeda;
     private bool flag_anda = false;
 
-    public bool gameOver = false;
-
     public SpriteRenderer shieldSprite;
 
     void Start()
@@ -43,19 +41,12 @@ public class InputManager : MonoBehaviour
         recorde.text = tempo_recorde.ToString();
         recorde.text = " " + PlayerPrefs.GetFloat("Pontuacao", 1.0f).ToString();
         PlayerPrefs.SetFloat("Dash", 0F);
+        PlayerPrefs.SetFloat("CoinMagnet", 0F);
         PlayerPrefs.SetFloat("Invincible", 0F);
     }
 
     void Update()
     {
-        // if(flag_anda){
-        //     rb.velocity = new Vector2(Speed,0);
-        // }
-
-        // if (OnJumpTap()){
-        //     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        // }
-        // rb.velocity = new Vector2(Speed,0);
         teto1.velocity = new Vector2(Speed,0);
         teto2.velocity = new Vector2(Speed,0);
         chao1.velocity = new Vector2(Speed,0);
@@ -76,8 +67,20 @@ public class InputManager : MonoBehaviour
             recorde.text = " " + tempo_recorde.ToString();
             Debug.Log("contando: " + time);
         }
-        
-        if ((tempo > 2) && (tempo_power_up > 2) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){
+
+        if (PlayerPrefs.GetFloat("CoinMagnet", 1.0f) == 1) {
+            PlayerPrefs.SetFloat("CoinMagnet", 0f);
+
+            GetComponent<CoinMagnet>().setIsActiveCoinMagnet(true);
+        }
+
+        if ((tempo_power_up > 5) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){ 
+            if (GetComponent<CoinMagnet>().getIsActiveCoinMagnet()) {
+                GetComponent<CoinMagnet>().setIsActiveCoinMagnet(false);
+            }
+        }
+
+        if ((tempo > 7) && (tempo_power_up > 2) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)) {
 
             time = time * 1.1F;
             Time.timeScale = time;
@@ -85,11 +88,9 @@ public class InputManager : MonoBehaviour
             PlayerPrefs.SetFloat("SavedTime", time);
             PlayerPrefs.Save();
             Debug.Log("AUMENTEI VELO: " + time);
+        }
 
-            //if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1){
-            //    PlayerPrefs.SetFloat("Invincible", 0F);
-            //    PlayerPrefs.Save();
-            //}
+        if ((tempo_power_up > 2) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){
             if (PlayerPrefs.GetFloat("Dash", 3.0f) == 1) {
                 PlayerPrefs.SetFloat("Dash", 0F);
                 PlayerPrefs.SetFloat("Invincible", 0F);
@@ -97,10 +98,6 @@ public class InputManager : MonoBehaviour
             
             FindObjectOfType<AudioManager>().Stop("SlowTime");
             FindObjectOfType<AudioManager>().Stop("Shield");
-        }
-        if (gameOver){
-            Time.timeScale = 0;
-            SceneManager.LoadScene("Scenes/MenuFinal");
         }
         if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1) { 
             shieldSprite.enabled = true;
@@ -117,29 +114,7 @@ public class InputManager : MonoBehaviour
             isJumping = false;
         }
     }
-
-    public void Invincible()
-    {
-        FindObjectOfType<AudioManager>().Play("Shield");
-        PlayerPrefs.SetFloat("Invincible", 1F);
-        PlayerPrefs.Save();
-        time = PlayerPrefs.GetFloat("SavedTime", 1.0f);
-        Time.timeScale = time;
-        tempo_power_up = 0;
-        PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
-        PlayerPrefs.SetFloat("OnGame", 1);
-        PlayerPrefs.Save();
-        Canvas.gameObject.SetActive(false);
-        
-    }
-
-    public void OnNo(){
-
-        FindObjectOfType<AudioManager>().Play("GameOver");  
-        gameOver = true;
-    }
     
-
     void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log("INCREIBEL: " + PlayerPrefs.GetFloat("Dash", 3.0f));
@@ -179,40 +154,5 @@ public class InputManager : MonoBehaviour
         // rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode2D.Impulse);
         FindObjectOfType<AudioManager>().Play("Jump");        
-    }
-
-    // public void OnRightHold()
-    // {          
-    //     flag_anda = true;
-    // }
-
-    public void OnLeftHold()
-    {
-        flag_anda = false;
-        rb.velocity = new Vector2(0,0);
-    }
-    public void OnSlowButton ()
-    {
-        FindObjectOfType<AudioManager>().Play("SlowTime");
-        Time.timeScale = 0.5F;
-        tempo_power_up = 0;
-        PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
-        PlayerPrefs.SetFloat("OnGame", 1);
-        PlayerPrefs.Save();
-        Canvas.gameObject.SetActive(false); 
-    }
-
-
-    public void OnDashButton()
-    {
-        PlayerPrefs.SetFloat("Dash", 1F);
-        PlayerPrefs.SetFloat("Invincible", 1F);
-        Time.timeScale = 10F;
-        tempo_power_up = 0;
-        PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
-        PlayerPrefs.SetFloat("OnGame", 1);
-        PlayerPrefs.Save(); 
-        Canvas.gameObject.SetActive(false);
-        
     }
 }
