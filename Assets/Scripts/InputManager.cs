@@ -21,6 +21,7 @@ public class InputManager : MonoBehaviour
     public float Speed = 5f;
     private bool isJumping = false;
     private bool invincible = false;
+    private bool isDashing = false;
     private Rigidbody2D rb;
     public Rigidbody2D teto1;
     public Rigidbody2D teto2;
@@ -33,14 +34,16 @@ public class InputManager : MonoBehaviour
 
     public bool gameOver = false;
 
+    public SpriteRenderer shieldSprite;
+
     void Start()
     {  
         rb = GetComponent<Rigidbody2D>();
         coinsText.text = "Coins: " + coins.ToString();
         recorde.text = tempo_recorde.ToString();
         recorde.text = " " + PlayerPrefs.GetFloat("Pontuacao", 1.0f).ToString();
-
-        
+        PlayerPrefs.SetFloat("Dash", 0F);
+        PlayerPrefs.SetFloat("Invincible", 0F);
     }
 
     void Update()
@@ -74,27 +77,36 @@ public class InputManager : MonoBehaviour
             Debug.Log("contando: " + time);
         }
         
-        if ((tempo > 7) && (tempo_power_up > 5) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){
+        if ((tempo > 2) && (tempo_power_up > 2) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){
 
             time = time * 1.1F;
             Time.timeScale = time;
             tempo = 0F;
             PlayerPrefs.SetFloat("SavedTime", time);
             PlayerPrefs.Save();
-            Debug.Log("AUMENTEI VELO: " + time); 
-            
-            if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1){
+            Debug.Log("AUMENTEI VELO: " + time);
+
+            //if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1){
+            //    PlayerPrefs.SetFloat("Invincible", 0F);
+            //    PlayerPrefs.Save();
+            //}
+            if (PlayerPrefs.GetFloat("Dash", 3.0f) == 1) {
+                PlayerPrefs.SetFloat("Dash", 0F);
                 PlayerPrefs.SetFloat("Invincible", 0F);
-                PlayerPrefs.Save();
             }
-
-
+            
             FindObjectOfType<AudioManager>().Stop("SlowTime");
             FindObjectOfType<AudioManager>().Stop("Shield");
         }
         if (gameOver){
             Time.timeScale = 0;
             SceneManager.LoadScene("Scenes/MenuFinal");
+        }
+        if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1) { 
+            shieldSprite.enabled = true;
+        } else
+        {
+            shieldSprite.enabled = false;
         }
     }
 
@@ -129,13 +141,21 @@ public class InputManager : MonoBehaviour
     
 
     void OnTriggerEnter2D(Collider2D collider)
-    {   Debug.Log("INCREIBEL: " + PlayerPrefs.GetFloat("Invincible", 3.0f));
-        if (collider.gameObject.CompareTag("Enemy") && PlayerPrefs.GetFloat("Invincible", 3.0f) == 0)
-        {   
-            Time.timeScale = 0;
-            PlayerPrefs.SetFloat("OnGame", 0);
-            adsInitializer.InitializeAds();
-            Canvas_Morte.gameObject.SetActive(true);
+    {
+        Debug.Log("INCREIBEL: " + PlayerPrefs.GetFloat("Dash", 3.0f));
+        if (collider.gameObject.CompareTag("Enemy") && PlayerPrefs.GetFloat("Dash", 3.0f) == 0)
+        {
+            if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1)
+            {
+                PlayerPrefs.SetFloat("Invincible", 0F);
+                PlayerPrefs.Save();
+            }
+            else { 
+                Time.timeScale = 0;
+                PlayerPrefs.SetFloat("OnGame", 0);
+                adsInitializer.InitializeAds();
+                Canvas_Morte.gameObject.SetActive(true);
+            }
         }
 
         if (collider.gameObject.CompareTag("Moeda"))
@@ -185,7 +205,7 @@ public class InputManager : MonoBehaviour
 
     public void OnDashButton()
     {
-        
+        PlayerPrefs.SetFloat("Dash", 1F);
         PlayerPrefs.SetFloat("Invincible", 1F);
         Time.timeScale = 10F;
         tempo_power_up = 0;
