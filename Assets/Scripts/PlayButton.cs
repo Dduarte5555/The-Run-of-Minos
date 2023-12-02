@@ -12,13 +12,13 @@ public class PlayButton : MonoBehaviour
 
     void Start()
     {
-        float score = PlayerPrefs.GetFloat("Pontuacao", 0.0F);
-        float maxScore = PlayerPrefs.GetFloat("Recorde", 0.0F);
-        PlayerPrefs.SetFloat("Pontuacao",0);
+        int score = PlayerPrefs.GetInt("Pontuacao", 0);
+        int maxScore = PlayerPrefs.GetInt("Recorde", 0);
+        PlayerPrefs.SetInt("Pontuacao", 0);
     
         if (score > maxScore){
             maxScore = score;
-            PlayerPrefs.SetFloat("Recorde", score);
+            PlayerPrefs.SetInt("Recorde", score);
         }
 
         if (scoreText) 
