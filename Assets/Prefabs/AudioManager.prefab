@@ -93,3 +93,9 @@ MonoBehaviour:
     pitch: 1.2
     loop: 1
     source: {fileID: 0}
+  - name: CoinMagnet
+    clip: {fileID: 8300000, guid: e3fe62e3787691342a6c960e82a6d385, type: 3}
+    volume: 0.75
+    pitch: 1.2
+    loop: 1
+    source: {fileID: 0}

@@ -8,7 +8,7 @@ using TMPro;
 public class InputManager : MonoBehaviour
 {
     public float jumpForce = 5f; // Adjust the jump force in the Inspector
-    [SerializeField] private Canvas Canvas;
+    [SerializeField] private Canvas canvasPowerUp;
     [SerializeField] private Canvas Canvas_Morte;
     [SerializeField] AdsInitializer adsInitializer;
     public int coins = 0;
@@ -39,7 +39,7 @@ public class InputManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coinsText.text = "Coins: " + coins.ToString();
         recorde.text = tempo_recorde.ToString();
-        recorde.text = " " + PlayerPrefs.GetFloat("Pontuacao", 1.0f).ToString();
+        recorde.text = " " + PlayerPrefs.GetInt("Pontuacao", 1).ToString();
         PlayerPrefs.SetFloat("Dash", 0F);
         PlayerPrefs.SetFloat("CoinMagnet", 0F);
         PlayerPrefs.SetFloat("Invincible", 0F);
@@ -59,13 +59,12 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetFloat("SavedTime_powerup", tempo_power_up);
         PlayerPrefs.Save(); 
         tempo = tempo + Time.unscaledDeltaTime;
-        Debug.Log("Valor inicial: " + PlayerPrefs.GetFloat("OnGame", 1.0f));
+
         if (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1){
             tempo_recorde = tempo_recorde + Time.unscaledDeltaTime;
-            PlayerPrefs.SetFloat("Pontuacao", tempo_recorde);
+            PlayerPrefs.SetInt("Pontuacao", Mathf.RoundToInt(tempo_recorde));
             PlayerPrefs.Save();
-            recorde.text = " " + tempo_recorde.ToString();
-            Debug.Log("contando: " + time);
+            recorde.text = " " + Mathf.RoundToInt(tempo_recorde).ToString();
         }
 
         if (PlayerPrefs.GetFloat("CoinMagnet", 1.0f) == 1) {
@@ -78,6 +77,7 @@ public class InputManager : MonoBehaviour
             if (GetComponent<CoinMagnet>().getIsActiveCoinMagnet()) {
                 GetComponent<CoinMagnet>().setIsActiveCoinMagnet(false);
             }
+            FindObjectOfType<AudioManager>().Stop("CoinMagnet");
         }
 
         if ((tempo > 7) && (tempo_power_up > 2) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)) {
@@ -88,16 +88,16 @@ public class InputManager : MonoBehaviour
             PlayerPrefs.SetFloat("SavedTime", time);
             PlayerPrefs.Save();
             Debug.Log("AUMENTEI VELO: " + time);
+            FindObjectOfType<AudioManager>().Stop("SlowTime");
         }
 
         if ((tempo_power_up > 2) && (PlayerPrefs.GetFloat("OnGame", 1.0f) == 1)){
             if (PlayerPrefs.GetFloat("Dash", 3.0f) == 1) {
                 PlayerPrefs.SetFloat("Dash", 0F);
                 PlayerPrefs.SetFloat("Invincible", 0F);
+                FindObjectOfType<AudioManager>().Stop("Shield");
             }
             
-            FindObjectOfType<AudioManager>().Stop("SlowTime");
-            FindObjectOfType<AudioManager>().Stop("Shield");
         }
         if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1) { 
             shieldSprite.enabled = true;
@@ -117,17 +117,20 @@ public class InputManager : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("INCREIBEL: " + PlayerPrefs.GetFloat("Dash", 3.0f));
         if (collider.gameObject.CompareTag("Enemy") && PlayerPrefs.GetFloat("Dash", 3.0f) == 0)
         {
             if (PlayerPrefs.GetFloat("Invincible", 3.0f) == 1)
             {
                 PlayerPrefs.SetFloat("Invincible", 0F);
                 PlayerPrefs.Save();
+                FindObjectOfType<AudioManager>().Stop("Shield");
             }
             else { 
                 Time.timeScale = 0;
                 PlayerPrefs.SetFloat("OnGame", 0);
+                FindObjectOfType<AudioManager>().Stop("SlowTime");
+                PlayerPrefs.SetFloat("CoinMagnet", 0F);
+                FindObjectOfType<AudioManager>().Stop("CoinMagnet");
                 adsInitializer.InitializeAds();
                 Canvas_Morte.gameObject.SetActive(true);
             }
@@ -139,12 +142,19 @@ public class InputManager : MonoBehaviour
             collider.gameObject.SetActive(false);
             FindObjectOfType<AudioManager>().Play("Coin");      
             coinsText.text = "Coins: " + coins.ToString();
-            if(coins>=2){
+            if (coins >= 2) 
+            {
                 Time.timeScale = 0;
                 coins = 0;
                 PlayerPrefs.SetFloat("OnGame", 0);
                 coinsText.text = "Coins: " + coins.ToString();
-                Canvas.gameObject.SetActive(true);
+                canvasPowerUp.gameObject.SetActive(true);
+
+                PowerUpsMenu powerUpsMenu = canvasPowerUp.GetComponent<PowerUpsMenu>();
+                if (powerUpsMenu != null) 
+                {
+                    powerUpsMenu.AssignRandomPowerUps();
+                }
             }
         }
     }
