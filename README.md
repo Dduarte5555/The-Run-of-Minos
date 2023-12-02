@@ -19,3 +19,5 @@ GameOver - https://freesound.org/people/myfox14/sounds/382310/
 PowerUp - https://freesound.org/people/GameAudio/sounds/220173/
 
 SlowTime - https://freesound.org/people/FoolBoyMedia/sounds/264498/
+
+CoinMagnet - https://freesound.org/people/Taira%20Komori/sounds/214040/
