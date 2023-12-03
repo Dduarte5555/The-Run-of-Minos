@@ -424,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 5468390
   _iOSGameId: 5468391
-  _testMode: 1
+  _testMode: 0
   rewardedAdsButton: {fileID: 594134151}
 --- !u!4 &75873613
 Transform:
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Watch video
+  m_text: Watch AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1670,6 +1670,7 @@ MonoBehaviour:
   _androidAdUnitId: Rewarded_Android
   _iOSAdUnitId: Rewarded_iOS
   Canvas_Morte: {fileID: 1529539272}
+  inputManager: {fileID: 1945798793}
 --- !u!1 &733904235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,7 +2606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Watch AD for extra life
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3894,6 +3895,7 @@ MonoBehaviour:
   coinsText: {fileID: 30448710}
   recorde: {fileID: 295427383}
   Speed: 5
+  propaganda: 1
   teto1: {fileID: 1559284496}
   teto2: {fileID: 129230726}
   chao1: {fileID: 86643807}
