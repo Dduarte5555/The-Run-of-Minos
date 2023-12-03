@@ -10,6 +10,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
     [SerializeField] private Canvas Canvas_Morte;
     string _adUnitId = null; // This will remain null for unsupported platforms
     float time;
+    public InputManager inputManager;
  
     void Awake()
     {   
@@ -64,6 +65,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
             Time.timeScale = time;
             PlayerPrefs.SetFloat("OnGame", 1);
             PlayerPrefs.Save();
+            inputManager.propaganda = false;
             Debug.Log("Você ganhou mais uma vida");
         }
     }

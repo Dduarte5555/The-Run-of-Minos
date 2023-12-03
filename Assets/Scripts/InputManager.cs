@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
     public TextMeshProUGUI recorde;
     public float Speed = 5f;
     private bool isJumping = false;
-    private bool invincible = false;
+    public bool propaganda = true;
     private bool isDashing = false;
     private Rigidbody2D rb;
     public Rigidbody2D teto1;
@@ -43,6 +43,7 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetFloat("Dash", 0F);
         PlayerPrefs.SetFloat("CoinMagnet", 0F);
         PlayerPrefs.SetFloat("Invincible", 0F);
+        
     }
 
     void Update()
@@ -126,13 +127,25 @@ public class InputManager : MonoBehaviour
                 FindObjectOfType<AudioManager>().Stop("Shield");
             }
             else { 
-                Time.timeScale = 0;
-                PlayerPrefs.SetFloat("OnGame", 0);
-                FindObjectOfType<AudioManager>().Stop("SlowTime");
-                PlayerPrefs.SetFloat("CoinMagnet", 0F);
-                FindObjectOfType<AudioManager>().Stop("CoinMagnet");
-                adsInitializer.InitializeAds();
-                Canvas_Morte.gameObject.SetActive(true);
+                if (propaganda){
+                    Time.timeScale = 0;
+                    PlayerPrefs.SetFloat("OnGame", 0);
+                    FindObjectOfType<AudioManager>().Stop("SlowTime");
+                    PlayerPrefs.SetFloat("CoinMagnet", 0F);
+                    FindObjectOfType<AudioManager>().Stop("CoinMagnet");
+                    //adsInitializer.InitializeAds();
+                    Canvas_Morte.gameObject.SetActive(true);
+
+                }
+                else{
+                    FindObjectOfType<AudioManager>().Play("GameOver");  
+                    FindObjectOfType<AudioManager>().Stop("SlowTime");
+                    PlayerPrefs.SetFloat("CoinMagnet", 0F);
+                    FindObjectOfType<AudioManager>().Stop("CoinMagnet");
+                    Time.timeScale = 0;
+                    SceneManager.LoadScene("Scenes/MenuFinal");
+                }
+
             }
         }
 
@@ -142,7 +155,7 @@ public class InputManager : MonoBehaviour
             collider.gameObject.SetActive(false);
             FindObjectOfType<AudioManager>().Play("Coin");      
             coinsText.text = "Coins: " + coins.ToString();
-            if (coins >= 2) 
+            if (coins >= 5) 
             {
                 Time.timeScale = 0;
                 coins = 0;
